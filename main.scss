@@ -12,7 +12,7 @@ body{
 }
 
 .main{
-    .one{
+    #one{
         background: #FCF0E3;
         height: 100vh;
         padding: 50px;
@@ -22,17 +22,24 @@ body{
         .wrap{
             width: 40%;
             padding-left: 5%;
+            z-index: 10;
             h1{
                 font-size: 3rem;
                 margin: 0px;
                 line-height: 5rem;
+            }
+            .hero-title-one{
+                transform: translateY(-1500px);
+            }
+            .hero-title-two{
+                transform: translateX(-1500px);
             }
             button{
                 width: 270px;
                 position: relative;
                 background: white;
                 border: 3px solid #222;
-                margin-top: 15px;
+                margin-top: 20px;
                 font-size: 2.5rem;
                 font-weight: 600;
                 color: #f36b7f;
@@ -40,6 +47,8 @@ body{
                 cursor: pointer;
                 letter-spacing: .5rem;
                 overflow: hidden;
+                transform: scale(2);
+                opacity: 0;
                 transition: all .5s ease;
                 padding-left: 32px;
                 img{
@@ -50,7 +59,11 @@ body{
                     opacity: 0;
                     transition: all .5s ease;
                 }
-                span{
+                .question{
+                    color: #222;
+                    padding-left: 5px;
+                }
+                .bubble{
                     position: absolute;
                     content: '';
                     top: 1.5em;
@@ -60,7 +73,7 @@ body{
                     opacity: 0.5;
                     background: #9fbfff;
                     margin-left: -10em;
-                    border-radius: 42.5%;
+                    border-radius: 44.5%;
                     transform-origin: 50% 50%;
                     animation: wave 3s infinite linear;
                     transition: all .5s ease, top .7s ease;
@@ -69,8 +82,11 @@ body{
                     transform: scale(1.1);
                     transform: translateX(10px);
                     padding-left: 0px;
-                    span{
+                    .bubble{
                         opacity: 0;
+                    }
+                    .question{
+                        display: none;
                     }
                     img{
                         opacity: 1;
@@ -94,15 +110,51 @@ body{
             }
         }
         .img-wrapper{
+            opacity: 1;
             position: relative;  
             display: flex;
             justify-content: flex-end;
             width: 100%;
+            transform: translateY(-1500px);
             img{
                 position: absolute;
                 right: 0;
                 bottom: 0;
                 width: 60vw;
+            }
+        }
+        @media screen and (max-width: 768px){
+            .wrap{
+                h1{
+                    width: 60vw;
+                    font-size: 2.5rem;
+                    line-height: 4rem;
+                }
+                button{
+                    font-size: 1.5rem;
+                    width: 200px;
+                    line-height: 3rem;
+                }
+            } 
+            .img-wrapper{
+                justify-content: flex-start;
+                img{
+                    width: 80vw;
+                }
+            }
+        }
+        @media screen and (min-width: 1600px){
+            .wrap{
+                h1{
+                    font-size: 5rem;
+                    line-height: 7rem;
+                }
+
+                button{
+                    margin-top: 30px;
+                    width: 400px;
+                    font-size: 3.5rem;
+                }
             }
         }
     }
