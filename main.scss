@@ -12,12 +12,98 @@ body{
 }
 
 .main{
-    display: flex;
     .one{
         background: #FCF0E3;
         height: 100vh;
-        img{
-            max-width: 80%;
+        padding: 50px;
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        .wrap{
+            width: 40%;
+            padding-left: 5%;
+            h1{
+                font-size: 3rem;
+                margin: 0px;
+                line-height: 5rem;
+            }
+            button{
+                width: 270px;
+                position: relative;
+                background: white;
+                border: 3px solid #222;
+                margin-top: 15px;
+                font-size: 2.5rem;
+                font-weight: 600;
+                color: #f36b7f;
+                padding: 5% 0%;
+                cursor: pointer;
+                letter-spacing: .5rem;
+                overflow: hidden;
+                transition: all .5s ease;
+                padding-left: 32px;
+                img{
+                    width: 2rem;
+                    position: relative;
+                    top: 2px;
+                    transform: translateX(-32px);
+                    opacity: 0;
+                    transition: all .5s ease;
+                }
+                span{
+                    position: absolute;
+                    content: '';
+                    top: 1.5em;
+                    left: 50%;
+                    width: 20em;
+                    height: 20em;
+                    opacity: 0.5;
+                    background: #9fbfff;
+                    margin-left: -10em;
+                    border-radius: 42.5%;
+                    transform-origin: 50% 50%;
+                    animation: wave 3s infinite linear;
+                    transition: all .5s ease, top .7s ease;
+                }
+                &:hover{
+                    transform: scale(1.1);
+                    transform: translateX(10px);
+                    padding-left: 0px;
+                    span{
+                        opacity: 0;
+                    }
+                    img{
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                } 
+                &:active, &:focus{
+                    outline: none;
+                }
+                @keyframes wave {
+                    0% {
+                      transform: rotate(0deg) scale(1);
+                    }
+                    50% {
+                      transform: rotate(180deg) scale(0.975);
+                    }
+                    100% {
+                      transform: rotate(360deg) scale(1);
+                    }
+                }
+            }
+        }
+        .img-wrapper{
+            position: relative;  
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            img{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 60vw;
+            }
         }
     }
 }
