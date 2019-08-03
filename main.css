@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:400,600&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: white;
+  color: #333;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .one {
+  background: #FCF0E3;
+  height: 100vh;
+}
+
+.main .one img {
+  max-width: 80%;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 99%;
+  color: #777;
+  font-size: 13px;
+}
+
+footer a {
+  color: #666;
+  text-decoration: none;
+  font-weight: 600;
+}
+/*# sourceMappingURL=main.css.map */
