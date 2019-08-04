@@ -12,7 +12,8 @@ body{
 }
 
 .main{
-    #one{
+    // First SLide
+    #first{
         background: #FCF0E3;
         height: 100vh;
         padding: 50px;
@@ -207,7 +208,156 @@ body{
             }
         }
     }
+    // Second Slide
+    #second{
+        position: relative;
+        // flex-direction: column;
+        // display: none;
+        // opacity: 0;
+        .row{
+            display: flex;
+            width: 100%;
+            background: url('images/pablo-sign-in.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 83vh;
+            box-sizing: border-box;
+        }
+        h1{
+            width: 99%;
+            text-align: center;
+            font-size: 2rem;
+            position: relative;
+            top: 20px;
+            overflow: hidden; 
+            white-space: nowrap;
+            margin: 0 auto; 
+            letter-spacing: .1em;
+            animation: 
+              typing 5s steps(30, end);
+            @media screen and (max-width: 991px){
+                animation: none;
+                border: none;
+                white-space: unset;
+                letter-spacing: 0em;
+            }
+        }
+
+        .dotted-bor{
+            height: 20px;
+            border-bottom: 7px dashed #F8CF61;
+            
+            &.one{
+                height: 40px;
+                margin: 0 auto;
+                width: 30vw;
+            }
+            &.two{
+                width: 12%;
+                position: relative;
+                top: -10px;
+            }
+            &.three{
+                width: 10%;
+                left: 37%;
+                position: relative;
+                top: -10px;
+            }
+        }
+        .col-1{
+            width: 25%;
+            position: relative;
+            top: -13%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .col-2{
+            width: 60%;
+        }
+        .col-3{
+            width: 9%;
+            position: relative;
+            top: -13%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-evenly;
+        }
+        .bubbles{
+            font-size: 1.3rem;
+            padding: 20px 8px;
+            border-radius: 40px;
+            background: white;
+            width: 173px;
+            text-align: center;
+            line-height: 2rem;
+            margin-bottom: 50px;
+            &.bub1{
+                border: 7px solid #82B5A5;
+            }
+            &.bub2{
+                border: 7px solid #F8CF61;
+            }
+            &.bub3{
+                border: 7px solid #9FBFFF;
+            }
+            &.bub4{
+                border: 7px solid #F36B7F;
+            }
+        }
+        .next-wrapper{
+            width: 100%;
+            position: absolute;
+            bottom: 8%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0% 5%;
+            box-sizing: border-box;
+            #slide3{
+                width: 30px;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .row{
+                flex-direction: column;
+                padding-top: 30px;
+                .col-1, .col-3{
+                    width: 100%;
+                    align-items: center;
+                    top: 0%;
+                    .bubbles{
+                        margin-bottom: 30px;
+                        padding: 10px 8px;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .next-wrapper{
+                bottom: 0%;
+            }
+        }
+    }
 }
+
+@keyframes typing {
+    0%{
+        width: 0%;
+        border-right: 3px solid #F8CF61;
+    }
+    70%{
+        width: 70%;
+        border-right: 3px solid #F8CF61;
+
+    }
+    100%{
+        width: 99%;
+        border-color: transparent;
+    }
+}
+
 footer{
     position: fixed;
     bottom: 10px;
