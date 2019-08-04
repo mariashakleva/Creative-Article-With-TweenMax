@@ -156,8 +156,34 @@ body {
   }
 }
 
+.main #one .wrap .animate-how {
+  background: transparent;
+  border: none;
+  color: #333;
+  overflow: visible;
+}
+
+.main #one .wrap .animate-how .bubble {
+  display: none;
+}
+
+.main #one .wrap .animate-how:hover {
+  -webkit-transform: scale(4);
+          transform: scale(4);
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.main #one .wrap .animate-how:hover img {
+  opacity: 0;
+}
+
+.main #one .wrap .animate-how:hover .question {
+  display: inline-block;
+}
+
 .main #one .img-wrapper {
-  opacity: 1;
+  opacity: 0;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -166,8 +192,8 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 100%;
-  -webkit-transform: translateY(-1500px);
-          transform: translateY(-1500px);
+  -webkit-transform: translateX(-1500px);
+          transform: translateX(-1500px);
 }
 
 .main #one .img-wrapper img {
@@ -175,6 +201,52 @@ body {
   right: 0;
   bottom: 0;
   width: 60vw;
+}
+
+.main #one .quote {
+  width: 100%;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.5rem;
+  font-family: 'Playfair Display';
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, right top, from(#9c6b6b), color-stop(#fff), to(#c58484));
+  background: linear-gradient(90deg, #9c6b6b, #fff, #c58484);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  -webkit-animation: shine-over 8s linear 1;
+          animation: shine-over 8s linear 1;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  display: none;
+  opacity: 0;
+}
+
+.main #one .quote span {
+  color: #c58484;
+}
+
+@-webkit-keyframes shine-over {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+
+@keyframes shine-over {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
 }
 
 @media screen and (max-width: 768px) {
